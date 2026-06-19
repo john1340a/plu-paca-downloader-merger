@@ -1,0 +1,30 @@
+# Données téléchargées / générées (volumineuses, régénérables, données publiques)
+PLU_PACA/
+*.gpkg
+*.zip
+
+# Logs
+download_log.txt
+clean_log.txt
+clean_loop_log.txt
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Fichier d'instructions interne (non pertinent pour le dépôt public)
+CLAUDE.md
+
+# Rapport généré à l'exécution (sortie, pas code source)
+rapport_corrompus.csv

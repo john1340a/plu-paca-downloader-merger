@@ -1,0 +1,9 @@
+# Téléchargement / scraping
+requests>=2.31
+beautifulsoup4>=4.12
+
+# Traitement géospatial (extraction, filtrage, fusion)
+geopandas>=0.14
+pandas>=2.0
+shapely>=2.0
+pyogrio>=0.7
