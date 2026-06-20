@@ -28,3 +28,6 @@ CLAUDE.md
 
 # Rapport généré à l'exécution (sortie, pas code source)
 rapport_corrompus.csv
+
+# Script d'import local PostGIS (config spécifique, non publié)
+import_postgis.py
