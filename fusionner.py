@@ -118,6 +118,13 @@ def collect_sources():
             raw.append((tab, None, p[1], p[0], "mapinfo", extract_date(tab)))
     for g in ROOT.rglob("*.gpkg"):
         p = g.relative_to(ROOT).parts
+        # GeoPackages recuperes via l'API GPU : PLU_PACA/_api_gpu/DU_<insee>.gpkg,
+        # couche 'zonage', commune = nom de fichier, dept deduit de l'INSEE.
+        if p[0] == "_api_gpu":
+            commune = g.stem                      # DU_<insee>
+            dept = "DU_" + g.stem.replace("DU_", "")[:2]
+            raw.append((g, "zonage", commune, dept, "gpkg", ""))
+            continue
         try:
             layers = [r[0] for r in sqlite3.connect(g).execute(
                 "SELECT table_name FROM gpkg_contents")]
